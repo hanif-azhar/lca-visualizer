@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# Dotenv / secrets
+.env
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/secrets.toml
