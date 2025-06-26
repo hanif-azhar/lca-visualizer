@@ -45,4 +45,9 @@ def calculate_impacts(df):
     df["CO2_eq_kg"] = df["Mass_kg"] * df["Emission_factor"]
     df["Energy_MJ"] = df["Mass_kg"] * df["Energy_MJ_per_kg"]
     df["Water_L"] = df["Mass_kg"] * df["Water_L_per_kg"]
-    return df[["Phase", "Material", "CO2_eq_kg", "Energy_MJ", "Water_L"]]
+    
+    keep_cols = ["Product", "Phase", "Material", "CO2_eq_kg", "Energy_MJ", "Water_L"] if "Product" in df.columns else \
+                ["Phase", "Material", "CO2_eq_kg", "Energy_MJ", "Water_L"]
+    
+    return df[keep_cols]
+
