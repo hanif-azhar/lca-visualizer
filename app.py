@@ -5,9 +5,9 @@ import io
 import plotly.io as pio
 from lca_data import load_sample_data, calculate_impacts, load_product_data
 
-st.set_page_config(page_title="🌱 LCA Visualizer", layout="wide")
+st.set_page_config(page_title="LCA Visualizer", layout="wide")
 
-st.title("🌱 Life Cycle Assessment Visualizer")
+st.title("Life Cycle Assessment Visualizer")
 
 data_source = st.radio("Choose data input:", ["Sample Data", "Upload CSV"])  #ONLY ONE TIME
 
